@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JZen Studios</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #A8E6CF;
+            --neutral-dark: #2C3E50;
+            --neutral-light: #F4F4F9;
+            --font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            color: var(--neutral-dark);
+            background-color: var(--neutral-light);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        header a.skip-to-content {
+            position: absolute;
+            left: -1000px;
+            top: -1000px;
+            background: #000;
+            color: #fff;
+            padding: 0.5rem;
+            z-index: 100;
+        }
+
+        header a.skip-to-content:focus {
+            left: 1rem;
+            top: 1rem;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+      .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,               0, 0, 0.4); 
+            z-index: 1;
+         }
+      
+
+        header h1 img {
+            width: 32px;
+            height: 32px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            width: 100%;
+            height: 100vh; 
+            padding: 4rem 2rem;
+            background:     url('https://img.freepik.com/foto-gratis/collage-fondo-programacion_23-2149901789.jpg?t=st=1736131676~exp=1736135276~hmac=d7a8dd31ae68ff5f6c57c1b3b16c7ee0b521af924df667a67a4e2deb0cfd1b82&w=2000') no-repeat center center;
+            background-size: cover;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero p {
+            margin-top: 1rem;
+            font-size: 2.2rem;
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .carousel-item img {
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services, .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--neutral-dark);
+            border-radius: 4px;
+        }
+
+        .contact-form input:invalid, .contact-form textarea:invalid {
+            border-color: red;
+        }
+
+        .contact-form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: var(--secondary-color);
+        }
+
+        .contact-form .error-message {
+            color: red;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: var(--neutral-dark);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+        <h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" alt="Bandera de Nicaragua">
+            JZen Studios
+        </h1>
+        <nav>
+            <a href="#services">Servicios</a>
+            <a href="#portfolio">Portafolio</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <h2>Claridad e Innovación en Desarrollo de Software</h2>
+            <p>Soluciones digitales equilibradas y personalizadas para tus necesidades.</p>
+        </section>
+
+        <section id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://img.freepik.com/foto-gratis/concepto-programacion-navegacion-tecnologia-diseno-web_53876-163260.jpg?t=st=1736131921~exp=1736135521~hmac=c32452fb508308ac55a6eb4f35056a5977eae17cb62960eca58f1ab7bb075e66&w=1800" class="d-block w-100" alt="Diseño UI/UX">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/foto-gratis/concepto-tecnologia-aplicacion-codigo-software-programacion_53876-123931.jpg?t=st=1736132040~exp=1736135640~hmac=14eab61be4b4e41273369041ed43e53f5cd658ad30cd6f26968a399ac45376e5&w=2000" class="d-block w-100" alt="Desarrollo de software a la medida">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/vector-gratis/concepto-desarrollo-app-diseno-plano_23-2147851632.jpg?t=st=1736131980~exp=1736135580~hmac=1bc97791333ed1f6cf3d68c98c4872f964831960505ae27487def46e48c6a56a&w=1380" class="d-block w-100" alt="Desarrollo móvil">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Servicios</h2>
+            <div class="services">
+                <div class="card" role="article" aria-labelledby="web-dev-title">
+                    <h3 id="web-dev-title">Desarrollo Web</h3>
+                    <p>Creación de sitios modernos y responsivos para empresas, startups y proyectos personales, asegurando experiencia de usuario óptima.</p>
+                </div>
+                <div class="card" role="article" aria-labelledby="mobile-app-title">
+                    <h3 id="mobile-app-title">Aplicaciones Móviles</h3>
+                    <p>Diseño y desarrollo de aplicaciones nativas e híbridas con funcionalidad personalizada y experiencia fluida en iOS y Android.</p>
+                </div>
+                <div class="card" role="article" aria-labelledby="custom-systems-title">
+                    <h3 id="custom-systems-title">Sistemas Personalizados</h3>
+                    <p>Soluciones de software adaptadas a las necesidades específicas de tu negocio, desde gestión de datos hasta automatización de procesos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section">
+            <h2>Portafolio</h2>
+            <div class="portfolio">
+                <div class="card">
+                    <h3>Proyecto A</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+                <div class="card">
+                    <h3>Proyecto B</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+                <div class="card">
+                    <h3>Proyecto C</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+                <div class="card">
+                    <h3>Proyecto D</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contacto</h2>
+            <form class="contact-form">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JZen Studios. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
